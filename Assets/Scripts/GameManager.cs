@@ -89,12 +89,7 @@ public class GameManager : MonoBehaviour
         if (obj == null) return; 
         if(!leftHandC.onGrip && !rightHandC.onGrip)
         {
-            if ((obj.transform.position - rightHandC.transform.position).magnitude < 1f ||
-                (obj.transform.position - leftHandC.transform.position).magnitude < 1f)
-            {
-                //can grip
-            }
-            else if (canBoost) Boost();
+            if (canBoost) Boost();
             else return;
         }
 

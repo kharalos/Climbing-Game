@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2834587, g: 0.36992827, b: 0.50107193, a: 1}
+  m_IndirectSpecularColor: {r: 0.56396645, g: 0.634668, b: 0.7254284, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7234,7 +7234,7 @@ MonoBehaviour:
   hand: 0
   target: {fileID: 2019043626}
   active: 0
-  speed: 100
+  speed: 500
   onGrip: 0
 --- !u!1 &1240089789
 GameObject:
@@ -7965,7 +7965,7 @@ MonoBehaviour:
   hand: 1
   target: {fileID: 1114183734}
   active: 0
-  speed: 100
+  speed: 500
   onGrip: 0
 --- !u!1 &1240089921
 GameObject:
@@ -13712,7 +13712,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.87e-43, y: 1.61e-43, z: 0, w: 0.000000043850974}
+  m_BoundingSphereOverride: {x: 9.18355e-40, y: 9.1858e-41, z: 2.4257473e-29, w: 2.2e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

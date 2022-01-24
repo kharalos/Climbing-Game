@@ -26,24 +26,26 @@ public class HandController : MonoBehaviour
     {
         h_Rigidbody = GetComponent<Rigidbody>();
     }
-
     private void Update()
     {
         if (justLaunched)
         {
             timer += Time.deltaTime;
-            if(timer > 1.2f)
+            if (timer > 1.2f)
                 justLaunched = false;
         }
         else
         {
             timer = 0;
         }
+    }
+    private void FixedUpdate()
+    {
         if (active)
         {
-            if ((target.position - transform.position).magnitude > 0.3f)
+            if ((target.position - h_Rigidbody.position).magnitude > 0.3f)
             {
-                h_Rigidbody.AddForce((target.position - transform.position).normalized * speed, ForceMode.Force);
+                h_Rigidbody.AddForce((target.position - h_Rigidbody.position).normalized * speed, ForceMode.Force);
 
                 if (!justLaunched) active = false;
 
@@ -57,9 +59,9 @@ public class HandController : MonoBehaviour
                 h_Rigidbody.isKinematic = true;
 
                 if (hand == HandType.right)
-                    transform.rotation = Quaternion.Lerp(transform.rotation, new Quaternion(0.5f, 0.5f, 0.5f, 0.5f), 0.1f);
+                    h_Rigidbody.rotation = Quaternion.Lerp(h_Rigidbody.rotation, new Quaternion(0.5f, 0.5f, 0.5f, 0.5f), 0.1f);
                 else
-                    transform.rotation = Quaternion.Lerp(transform.rotation, new Quaternion(-0.5f, 0.5f, -0.5f, 0.5f), 0.1f);
+                    h_Rigidbody.rotation = Quaternion.Lerp(h_Rigidbody.rotation, new Quaternion(-0.5f, 0.5f, -0.5f, 0.5f), 0.1f);
 
                 onGrip = true;
             }
